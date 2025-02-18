@@ -63,7 +63,6 @@ export default function UserPage() {
     );
   }
 
-  // Data for charts
   const languageData = userData.languages.map((lang) => ({
     name: lang.name,
     value: lang.size,
@@ -71,7 +70,6 @@ export default function UserPage() {
 
   const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042", "#AF19FF"];
 
-  // Insights
   const busiestMonth = userData.monthlyContributions.reduce(
     (prev, curr) => (curr.count > prev.count ? curr : prev),
     { date: "", count: 0 }
